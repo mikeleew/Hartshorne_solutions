@@ -11,6 +11,9 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tikz-cd}
 \usepackage[, total={6.5in, 8in}]{geometry}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
@@ -20,7 +23,7 @@
 \newtheorem{proposition}{Proposition}[theorem]
 \setlength{\parindent}{0cm}
 \setcounter{section}{0}
-
+\setenumerate[0]{label=\alph*)}
 \title{Hartshorne Solutions}
 \author{mlwells} 
 \date{2025}
@@ -32,5 +35,6 @@ Feel free to add your Discord name to the author list.  Let's add our usernames 
 
 \tableofcontents
 \include{chapter1/chapter1.tex}
+\include{chapter2/chapter2.tex}
 
 \end{document}

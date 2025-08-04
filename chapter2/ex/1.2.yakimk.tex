@@ -1,0 +1,32 @@
+    \subsection*{1.2   \href{https://github.com/yakimk}{yakimk}
+}
+
+\begin{enumerate}
+    \item Since stalks are defined as a filtered colimit and kernels are a particular type of limit (pullback) and \href{https://stacks.math.columbia.edu/tag/002W}{filtered colimits commute with finite limits} isomorphism $(\ker \phi_{P}) = \ker(\phi_{P})$ is automatic.
+
+To show a similar thing for the image we first note that $(\operatorname{im}\phi)_{P} \simeq ({(\operatorname{im}_{pre}\phi)^{+})_{P}}\simeq (\operatorname{im}_{pre} \phi)_{P}$, where the first isomorphism is by definition and the second one using the fact that sheafification has the same stalks as original presheaf.  Now we conclude noticing that $\operatorname{im}_{pre}\phi \simeq \ker(\operatorname{coker}\phi)$, i.e. it is a finite limit of finite colimits and since again stalks are filtered colimits they commute with finite limits and colimits (in for instance abelian category) we conclude that $(\operatorname{im} \phi)_{P} \simeq \operatorname{im}(\phi_{P})$.
+
+\item We show that a map of sheaves $\phi: \mathscr{F} \to \mathscr{G}$ is injective iff it induced maps on stalks are injective (proof for surjectivity is essentially identical).
+
+Consider the following commutative diagram
+\[
+\begin{tikzcd}
+\mathscr{F}(U)     \arrow[r,"\phi_{U}"] \arrow[d,"\iota _{1}"'] &  \mathscr{G}(U) \arrow[d,"\iota_{2}"]\\ 
+\prod_{P \in U} \mathscr{F}_{p}     \arrow[r,"\prod \tilde{\phi }_{P}"] &  \prod_{P \in U}\mathscr{G}_{p}
+\end{tikzcd}
+\]
+
+Note that since section of a sheaf on an open set is determined by its stalks, $\iota_{1}$ and $\iota_{2}$ are both injective.
+
+Suppose $\tilde{\phi}_{P}$ is injective for all $P$. Take two sections $f, g \in \mathscr{F}(U)$, since $\prod \tilde{\phi}_{P}$ and $\iota_{1}$ are injective (former by the hypothesis that $\tilde{\phi}_{P}$ are injective), their composition is injective. If $\phi_{U}$ were not injective, we could find two different sections that go to the same class in $\prod \mathscr{G}_{P}$, which would contradict injectivity of $\prod \tilde{\phi}_{P} \circ \iota_{1}$.
+
+Similarly if $\phi_{U}$ is injective then if some of $\tilde{\phi}_{P}$  were not injective, its composition with $\iota_{1}$ would not be injective contradicting commutativity of the diagram above. 
+
+\item We have to show that 
+$\begin{tikzcd}[cramped, sep=small] \cdots \arrow[r] & \mathscr{F}^{i-1} \arrow[r] & \mathscr{F}^{i} \arrow[r] & \mathscr{F}^{i+1} \arrow[r] & \cdots \end{tikzcd}$
+is exact iff induced sequence of stalks are exact for all $P$.
+
+Assuming that sequence of sheaves is exact we show induced sequences are exact at all stalks. By the previuos section $\operatorname{im} \phi_{P}^i \simeq (\operatorname{im} \phi^i)_{P}\simeq(\ker \phi^{i+1})_{P}\simeq \ker \phi_{P}^{i + 1}$.
+
+Now assume that all sequences of stalks are exact.  By the same reasoning as before we see that  $\operatorname{im} \phi^{i}\simeq \ker \phi^{i+1}$ (since they are isomorphic on each stalk and hence are equal).
+\end{enumerate}

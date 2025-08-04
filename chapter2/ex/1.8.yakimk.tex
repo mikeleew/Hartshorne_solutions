@@ -1,0 +1,22 @@
+    \subsection*{1.8   \href{https://github.com/yakimk}{yakimk}
+}
+
+
+Given exact sequence of sheaves 
+\[
+\begin{tikzcd}[cramped, sep=small] 0 \arrow[r] & \mathscr{F'} \arrow[r, "\phi"] & \mathscr{F} \arrow[r, "\gamma"] & \mathscr{F''} \arrow[r] & 0 \end{tikzcd}
+\]
+We have to show that 
+\[
+\begin{tikzcd}[cramped, sep=small] 0 \arrow[r] & \Gamma(U, \mathscr{F'}) \arrow[r, "\phi_U"] & \Gamma(U,\mathscr{F}) \arrow[r, "\gamma_U"] & \Gamma(U, \mathscr{F''})  \end{tikzcd}
+\]
+exact.
+
+Injectivity of $\phi_{U}$ follows from definition.
+
+We show that $\ker\gamma_{U} = \operatorname{im} \phi_{U}$.
+
+$(\ker\gamma_{U}  \supseteq \operatorname{im} \phi_{U}$) Is immidiate by functoriality of $\Gamma(U, \cdot )$ and hypothesis.
+
+$(\ker\gamma_{U} \subseteq  \operatorname{im} \phi_{U}$) Let $s \in \mathscr{F}(U)$ and $\gamma_{U}(s) = 0$. By hypothesis and “\nameref{subsec:II.1.2}” we know that the induced sequences of stalks are all exact. In particular for all $P \in U$ induced sequences are all exact. Which means that each for stalk $s_{P} = \phi_{P}(k_{P})$, i.e. there is some section $k \in \mathscr{F'}(U)$ and an open set $V_{P}$ such that $s|_{V_{P}}=\phi(k)|_{V_{P}}$. Hence we can form an open cover $U = \bigcup_{P \in U} V_P$. Notice that by definition they agree on overlaps and hence we get a full section of $\mathscr{F'}$ on $U$ (call it $q \in \mathscr{F'}(U)$) and since all the stalks of $\phi_{P}(q_{P}) = s_{P}$ for all $P \in U$ and hence are equal on $U$.
+

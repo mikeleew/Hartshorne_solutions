@@ -10,8 +10,9 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathrsfs}
 \usepackage[, total={6.5in, 8in}]{geometry}
-
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[theorem]
@@ -25,49 +26,11 @@
 \date{2025}
 
 \begin{document}
+
 \maketitle
 Feel free to add your Discord name to the author list.  Let's add our usernames to our solutions, too, so that people get proper credit.
-\section*{Chapter 1}
-\subsection*{1. Affine Varieties}
-Solutions:
-\begin{itemize}
-    \item [] 1.1
-    \begin{itemize}
-        \item [] (a)
-        \item [] (b)
-        \item [] *(c)
-    \end{itemize}
-    \item [] 1.2
-    \item [] 1.3
-    \item [] 1.4
-    \item [] 1.5
-    \item [] 1.6
-    \item [] 1.7
-    \begin{itemize}
-        \item [] (a)
-        \item [] (b)
-        \item [] (c)
-        \item [] (d)
-    \end{itemize}
-    \item [] 1.8  Let $Y$ be an affine variety of dimension $r$ in $\mathbb{A}^n$.  Let $H$ be a hypersurface in $\mathbb{A}^n$, and assume that $Y \not\subseteq H$.  Then every irreducible component of $Y \cap H$ has dimension $r-1$.
 
-    mlwells:
-    
-    Suppose that $H = Z(f)$ with $f$ irreducible in $k[x_1,\ldots, x_n]$.  Then the projection of $f$ in $A(Y) := k[x_1,\ldots,x_n]/I(Y)$ is not equal to $\overline{0}$ since by assumption $(f) \not\subset I(Y)$.  Since $A(Y)$ is a domain (due to the irreducibility of $Y$), the element $\overline{f}$ is not a zero divisor.  Assuming that $Y \cap H \neq \varnothing$, we have that $\overline{f}$ is not a unit in $A(Y)$.  To see this, let $P \in Y \cap H$.  Then $I(Y), (f) \subset \mathfrak{m}_P$, the maximal ideal of $k[x_1,\ldots,x_n]$ corresponding to $P$.  This implies $(\overline{f}) \subset \mathfrak{m}_P / I(Y)$, the latter being a maximal ideal in $A(Y)$.  Thus, $\overline{f}$ is not a unit.
-
-    We apply Theorem 1.11A to get that every minimal prime ideal $\mathfrak{p}$ in $A(Y)$ containing $\overline{f}$ has height 1.  The irreducible components of $Y \cap H$ and the minimal prime ideals containing $(\overline{f})$ correspond, and since each of these prime ideals has height 1, the corresponding varieties have dimension $r-1$ by Theorem 1.8A.
-    \item [] 1.9
-    \item [] 1.10
-    \begin{itemize}
-        \item [] (a)
-        \item [] (b)
-        \item [] (c)
-        \item [] (d)
-        \item [] (e)
-    \end{itemize}
-    \item [] *1.11
-    \item [] 1.12
-\end{itemize}
-
+\tableofcontents
+\include{chapter1/chapter1.tex}
 
 \end{document}

@@ -1,0 +1,28 @@
+    \subsection*{2.12 (b)   \href{https://github.com/mikeleew}{mlwells}
+}
+
+
+Let $Q = \rho_d(P) = (M_0(a), \ldots, M_N(a))$.  Let $F \in \mathfrak{a} = \mbox{\rm ker }\theta$.  Then $F(M_0, \ldots, M_N) = 0$ as a polynomial, which implies $F(M_0(a), \ldots, M_N(a)) = 0$.  Since $F$ was arbitrary, $Q \in Z(\mathfrak{a})$. 
+
+Now let $Q = (y_0, \ldots, y_N) \in Z(\mathfrak{a})$.  Suppose without loss of generality that $y_0 \neq 0$.  It follows that $Q = (y_0^d, y_0^{d-1} y_1, \ldots, y_0^{d-1} y_N)$.  Suppose that $M_0 = x_0^d, M_1 = x_0^{d-1} x_1, \ldots, M_n = x_0^{d-1} x_n$.
+\setcounter{section}{1}
+\setcounter{subsection}{2}
+\begin{proposition}
+	For all $j =0,\ldots, N$, we have that 
+	\begin{equation}
+		M_0^{d-1} M_j = M_0^{i_0} M_1^{i_1} \ldots M_n^{i_n} 
+	\end{equation}
+	for some $i_j \geq 0$ with $\sum_j i_j = d$.
+\end{proposition}
+
+\begin{proof}
+Suppose $M_j = x_0^{i_0} \ldots x_n^{i_n}$ where $\sum_j i_j = d$.  We have
+\begin{align}
+M_0^{d-1} M_j &= x_0^{(d-1)d + i_0} x_1^{i_1} \ldots x_n^{i_n}\\
+&= x_0^{(d-1)i_0 + i_0 + (d-1)\sum_{j \geq 1} i_j} x_1^{i_1} \ldots x_n^{i_n}\\
+&= x_0^{d i_0} (x_0^{d-1} x_1)^{i_1} \ldots (x_0^{d-1} x_n)^{i_n}\\
+&= M_0^{i_0} M_1^{i_1} \ldots M_n^{i_n}
+\end{align}
+\end{proof}
+
+Let $P = (y_0, \ldots, y_n)$.  Then, by the proposition, we have that $Q = (M_0(P), M_1(P), \ldots, M_N(P)) = \rho_d(P)$, as was to be shown.

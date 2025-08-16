@@ -1,0 +1,41 @@
+    \subsection*{3.20 (a)   \href{https://github.com/mikeleew}{mlwells}
+}
+
+
+If we show that $f$ restricted to $V - P$ extends to a regular function on $V \subseteq Y$ for any affine neighborhood $V$ of $P$,
+then by gluing we will have shown that $f$ extends to a regular function on $Y$.  So, assume that $Y$ is affine.
+
+The function $f = c/d \in K(Y)$ for regular functions $c, d \in A(Y)$.  If we can show that the ideal quotient
+$((c) : (d)) = \{h \in A(Y) \colon hc \in (d)\}$ is equal to $A(Y)$, then it follows that $c/d \in A(Y)$.  By assumption,
+$f \in \mathcal{O}_Q$ for all $ Q \neq P \in Y$.  Let $\mathfrak{m}_Q$ denote the maximal ideal of $A(Y)$ corresponding to $Q$.
+Then the localized ideal $((c) : (d))_{\mathfrak{m}_Q}$ is equal to $A(Y)_{\mathfrak{m}_Q} = \mathcal{O}_Q$ for all $Q \neq P$ since $c/d \in \mathcal{O}_Q$.  It remains
+to show that $((c) : (d))_{\mathfrak{m}_P} = A(Y)_{\mathfrak{m}_P} = \mathcal{O}_P$.  If $\mathfrak{p} A(Y)_{\mathfrak{m}_P}$ is a prime ideal of
+$\mathcal{O}_P$ not equal to the maximal ideal $\mathfrak{m}_P A(Y)_{\mathfrak{m}_P}$, then $((c) : (d))_{\mathfrak{m}_P} \not\subseteq \mathfrak{p}A(Y)_{\mathfrak{m}_P}$
+since $c/d$ is in the local ring corresponding to the subvariety defined by $\mathfrak{p}$, and hence
+$((c) : (d))_{\mathfrak{p}} = A(Y)_{\mathfrak{p}}$.
+.  Assume by way of contradiction
+that $((c) : (d))_{\mathfrak{m}_P} \subseteq \mathfrak{m}_P A(Y)_{\mathfrak{m}_P}$. Then, $\sqrt{((c) : (d))_{\mathfrak{m}_P}} = \mathfrak{m}_P$.
+
+Let $a_1, \ldots, a_s$ be a regular sequence in $\mathfrak{m}_P A(Y)_{\mathfrak{m}_P}$ with $s > 1$.  By Theorem 8.22A of
+Chapter II of Hartshorne part (2), such a sequence exists.  We have shown that $a_1^{r_1}, a_2^{r_2} \in ((c): (d))_{\mathfrak{m}_P}$
+for some $r_1, r_2 > 0$ with $a_1^{r_1-1}, a_2^{r_2-1} \notin ((c) : (d))_{\mathfrak{m}_P}$  .  Thus,
+\begin{equation}
+    a_1^{r_1} c = e_1 d, \;\; e_1 \notin (a_1)
+\end{equation}
+and
+\begin{equation}
+    a_2^{r_2} c = e_2 d, \;\; e_2 \notin (a_2)
+\end{equation}
+Thus,
+\begin{equation}
+    a_1^{r_1} a_2^{r_2} c = e_1 a_2^{r_2} d = e_2 a_1^{r_1} d
+\end{equation}
+which implies
+\begin{equation}
+    e_1 a_2^{r_2} = e_2 a_1^{r_1}
+\end{equation}
+Since $e_1 \notin (a_1)$ and $a_2 \notin (a_1)$, $a_2$  is a zero divisor in the ring $A(Y)_{\mathfrak{m}_P}/(a_1)$.  This
+contradicts the fact that $a_1, a_2$ is a regular sequence in $\mathfrak{m}_P A(Y)_{\mathfrak{m}_P}$.
+
+Thus, we conclude that $((c) : (d))_{\mathfrak{m}_P} = A(Y)_{\mathfrak{m}_P}$, and hence $f \in \mathcal{O}_P$.  This
+shows that $((c): (d)) = A(Y)$ which implies $f \in A(Y)$, and hence $f$ extends to a regular function on $Y$.

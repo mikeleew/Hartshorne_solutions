@@ -17,6 +17,145 @@
 \usepackage[, total={6.5in, 8in}]{geometry}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
+% \usepackage{PRIMEarxiv}
+
+% \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{fancyhdr}       % header
+\usepackage{graphicx}       % graphics
+\usepackage{listings}       % for viewing code
+\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
+%\usepackage{upgreek}
+
+
+
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, decorations.markings, calc, fit}
+
+% \newtheorem{lemma}{Lemma}
+
+\definecolor{theoremblue}{HTML}{00008B}
+\newcommand{\thm}[2]{
+\begin{tcolorbox}[colback=white,colframe=theoremblue!25,title=\textbf{#1}]
+#2
+\end{tcolorbox}
+}
+
+\graphicspath{{media/}}     % organize your images and other figures under media/ folder
+\usepackage{tabularray}
+
+\newcommand{\red}[1]{\textcolor[HTML]{b0342c}{#1}}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\renewcommand{\to}{\Rightarrow}
+\renewcommand{\tau}{\uptau}
+
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\trace}{\text{trace}}
+\newcommand{\diag}{\text{diag}}
+\newcommand{\im}{\text{im}}
+\newcommand{\id}{\text{id}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\abel}{\text{abel}}
+\newcommand{\vepo}{\varepsilon_{f(0)} * f }
+\newcommand{\vepi}{f * \varepsilon_{f(1)}}
+
+\newcommand{\ad}{\text{ad}}
+\newcommand{\Ad}{\text{Ad}}
+\newcommand{\Id}{\text{Id}}
+\newcommand{\SL}{\text{SL}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\SU}{\text{SU}}
+\newcommand{\Ab}{\textbf{Ab}}
+\newcommand{\Top}{\textbf{Top}}
+\newcommand{\Rings}{\textbf{Rings}}
+\newcommand{\1}{\mathbf{1}}  % Indicator 1
+\newcommand{\rank}{\text{rank}}
+
+
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ext}{\text{Ext}}
+\newcommand{\Tor}{\text{Tor}}
+\newcommand{\obj}{\text{obj}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\SO}{\text{SO}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\Lie}{\text{Lie}}
+\newcommand{\RPZ}{\mathbb{R}/2\pi\mathbb{Z}}
+\newcommand{\RZ}{\mathbb{R}/\mathbb{Z}}
+\newcommand{\SNS}{S^n\!/\!\!\sim}
+\newcommand{\HH}{\mathfrak{H}}
+\newcommand{\RR}{\mathfrak{R}}
+\renewcommand{\d}{\partial}
+\newcommand{\bigast}{\mathop{\mbox{\Large $\ast$}}}
+
+
+
+\newcommand{\N}{\mathbb{N}}    % Natural numbers
+\newcommand{\A}{\mathbb{A}}    % Affine space
+\newcommand{\Z}{\mathbb{Z}}    % Integers
+\newcommand{\Q}{\mathbb{Q}}    % Rational numbers
+\newcommand{\R}{\mathbb{R}}    % Real numbers
+\newcommand{\C}{\mathbb{C}}    % Complex numbers
+\newcommand{\F}{\mathbb{F}}    % Generic field
+\newcommand{\E}{\mathbb{E}}    % Expected value
+\newcommand{\RP}{\mathbb{RP}}  % Real projective space RP^n
+\newcommand{\CP}{\mathbb{CP}}  % Real projective space CP^n
+\newcommand{\simneq}{\nsim}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\bracket}[1]{\langle #1 \rangle}
+
+
+\newcommand{\g}{\mathfrak{g}}  % Lie algebra g for Lie group G
+\newcommand{\h}{\mathfrak{h}}  % Lie algebra h for Lie group H
+\renewcommand{\k}{\mathfrak{k}} % Lie algebra k
+\renewcommand{\mod}{\text{mod }} % Lie algebra k
+\newcommand{\BB}{\mathcal{B}}  % Bases for spaces
+\renewcommand{\AA}{\mathcal{A}}  % Atlas for manifolds
+\newcommand{\CC}{\mathcal{C}}  % Category
+
+
+% Operators
+\newcommand{\spann}[1]{\operatorname{span}\{#1\}}  % operator: span{X}
+\renewcommand{\sl}{\mathfrak{sl}}% Lie algebra of SL
+\newcommand{\fundgroup}[1]{\pi_{1}(#1)}
+\newcommand{\fundgroupp}[2]{\pi_{1}(#1,#2)}
+\newcommand{\normalsub}{\trianglelefteq}
+\newcommand{\equivalent}{\Longleftrightarrow}
+
+
+\let\oldexp\exp    % Save the old definition if you need it later
+\renewcommand{\exp}[1][]{\text{exp}\if\relax\detokenize{#1}\relax\else(#1)\fi}
+\renewcommand{\to}{\rightarrow}
+\newcommand{\coto}{\leftarrow}
+
+
+%Header
+\pagestyle{fancy}
+\rhead{ \textit{ }} 
+
+\newenvironment{notation}
+  {\begin{center}
+   \small\ttfamily
+   \begin{minipage}{0.6\textwidth}
+   \setlength{\parindent}{0pt}}
+  {\end{minipage}
+   \end{center}}
+
+
+
+
+
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}[theorem]
 \newtheorem{corollary}{Corollary}[theorem]

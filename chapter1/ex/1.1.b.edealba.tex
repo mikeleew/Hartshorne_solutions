@@ -1,0 +1,10 @@
+  \subsection*{1.1 (b)   {edealba}}
+
+Note that $A(Z)$ is the following:
+$$ A(Z) = \Bigg\{ \sum_{i, j \geq 0} c_{ij}\bar{x}^i\bar{y}^j \mid c_{ij} \in k, \text{ only a finite number of $c_{ij}$ are non-zero}, \text{ and } \bar{x}\bar{y}=1  \Bigg\} $$
+
+Suppose there were a ring isomorphism $\phi: A(Z) \to k[t]$, where we choose $t$ to be the polynomial ring of one variable over $k$. Note that ring isomorphisms must map units to units. Since we're working over the plane curve $xy = 1$, this means that the image of $x$ in $A(Z)$ is unit, i.e. $\bar{x} \in A(Z)$ is unit. Note that the units in $k[t]$ are all the non-zero constants, i.e. $c \in k^{\times} \subset k[t]$, where these are just the non-zero elements of the field $k$. Since $\phi$ maps units to units, then $\bar{x}$ must get mapped to some non-zero constant in $k[t]$. Note that if $\bar{x}$ gets mapped to a constant, then $\im(\phi) = k$. This is because if we have some arbitary $p \in A(Z)$ then we have:
+$$ p = \sum_{i, j \geq 0} c_{ij}\bar{x}^i\bar{y}^j, $$
+but note that if $\bar{x}\mapsto c_x$ where $c_x$ is some non-zero constant in $k$ then this implies that $\bar{y}\mapsto c_y$ where $c_y$ is also some non-zero constant such that $c_y = 1/c_x$. This means that $\phi(p)$ is:
+$$ \phi(p) = \sum_{i, j \geq 0} c_{ij}c_x^{i} c_y^{j}, $$
+which is just some constant element of $k$ for any $p \in A(Z)$. Note that $\im(\phi) = k$ is a contradiction since we assumed $\phi$ was an isomorphism, i.e. $\im(\phi) = k[t]$. This means there is no such ring isomorphism $\phi: A(Z) \to k[t]$. \qed

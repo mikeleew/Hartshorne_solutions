@@ -1,0 +1,12 @@
+\subsection*{2.3 (a) (b) {edealba}}
+
+\begin{enumerate}
+    \item This follows since $Z$ is a contravaiant functor (or operator), so when we apply $Z$ to $T_1 \subseteq T_2$, we reverse the ``arrows'', in this case we get $\supseteq$, and thus:
+$$ Z(T_1) \supseteq Z(T_2). $$
+To elaborate, let's consider $T_1 \subseteq T_2 \subseteq S^h$. Let $p \in Z(T_1)$, i.e. $p$ is a point such that every homogeneous polynomial in $T_1$ vanishes at $p$. Does this imply that $p \in Z(T_2)$? Not necessarily. Suppose there exists some polynomial $g \in T_2 - T_1$, where $g \in T_2$ and $g \notin T_1$. Note that $p \in Z(T_1)$ does \emph{not} guarantee that $g(p) = 0$ since $g \notin T_1$. On the other hand, suppose $p' \in Z(T_2)$. This means that every polynomial $f$ in $T_2$ is such that $f(p') = 0$. Since $T_1 \subseteq T_2$, then this still holds for every polynomial in $T_1$, thus $p' \in Z(T_2)$ implies that $p' \in Z(T_1)$, i.e.
+$$ Z(T_2) \subseteq Z(T_1), \text{ or } Z(T_1) \supseteq Z(T_2), $$
+like we wanted to show. \qed
+    \item  If $Y_1 \subseteq Y_2$ are subsets of $\P^n$, then $I(Y_1) \supseteq I(Y_2)$.
+Similar to (a), $I$ is also contravaiant functor (or operator), so when we apply $I$ to $Y_1 \subseteq Y_2$, we get:
+$$ I(Y_1) \supseteq I(Y_2) $$ \qed
+\end{enumerate}

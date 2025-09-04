@@ -1,0 +1,25 @@
+  \subsection*{2.1   {edealba}}
+
+Let $W = Z(J) \subset \P^n$ be a projective variety, and note that $f(P) = 0$ means that the homogeneous polynomial $f$ vanishes at each point in $W \subset \P^n$ which represents a line going through the origin in $\A^{n+1}$. Consider the \emph{affine cone} over $W = Z(J)$, which we denote $C(W) \subset \A^{n+1}$. Since $f(P) = 0$ for points $P$ that represent lines going through the origin in $\A^{n+1}$, hence $f(p) = 0$ for all points $p \in C(W) \subset \A^{n+1}$ since these are all points on the lines projected in $W = Z(J) \subset \P^n$.
+
+We want to show that $C(W) = C(Z(J)) = V(J)$, where $V(J) \subset \A^{n+1}$ is the variety of vanishing points of the ideal $J$.
+
+First, let's show that $C(Z(J)) \subset V(J)$. Let $p = (a_0, \ldots, a_n) \in C(Z(J))$ be a point. We have the following cases:
+
+- If $p = (0, \ldots, 0)$, i.e. this is the origin in $\A^{n+1}$, then for any homogeneous polynomial $g \in J$, we get $g(p) = 0$ since homogeneous polynomials don't have a constant term.
+
+- Suppose $p = (a_0, \ldots, a_n) \neq 0$. This is a point in the affine cone, so it's a representative for a point $P \in Z(J) \subset \P^n$ such that $P = [a_0:\cdots:a_n]$. Note that any homogeneous polynomial $g \in J$ vanishes at $P$, by definition of $Z(J)$. Note that $g(P) = 0$ implies that $g(p) = 0$ since $g$ vanishes at any point on the line corresponding to $P$, i.e. for any point $p_{\lambda} = (\lambda a_0, \ldots, \lambda a_n)$ we get:
+$$ g(p_{\lambda}) = g(\lambda a_0, \ldots, \lambda a_n) = \lambda^d \cdot g(a_0, \ldots, a_n) =0, $$
+where $g$ is a degree $d$ homogeneous polynomial. What about non-homogeneous polynomials in $J$? Let $h$ be any polynomial in $J$. Since $J$ is a homogeneous ideal, then we can write:
+$$ h = h_1 + h_2 + \cdots + h_d, $$
+where each $h_i$ is a homogeneous polynomial in $J$. Since $h_i(p) = 0$ for each homogeneous $h_i \in J$, then:
+$$ h(p) = \sum h_i(p) = 0, $$
+which means that any polynomial $h \in J$ vanishes at $p$.
+
+This shows that $p \in C(Z(J))$ implies that $p \in V(J)$, thus
+$$ C(W) = C(Z(J)) \subset V(J). $$
+
+Next, let's show that $V(J) \subset C(Z(J))$. Let $p = (a_0, \ldots, a_n) \in V(J)$. This means that any polynomial $g \in J$ vanishes at $p$, i.e. $g(p) = 0$. This holds, in particular, for \emph{homogeneous} polynomials in $J$. Note that this is precisely the condition for the projective point $P = [a_0: a_1: \cdots : a_n]$ to be in $Z(J)$. Since $P \in Z(J)$, then the point $p$ lies on the line representing $P$. By definition of the affine cone, this means that $p \in C(Z(J))$. Thus,
+$$ V(J) \subset C(Z(J)). $$
+
+With this, we've shown that $C(W) = C(Z(J)) = V(J)$. Since $V(J) \subset \A^{n+1}$, we can apply Hilbert's Nullstellensatz. Recall that $f$ is a polynomial such that $f(P) = 0$ for all points $P \in Z(J)$. This implies that $f$ vanishes at all points in the affine cone $p \in C(Z(J)) = V(J) \subset \A^{n+1}$. By Hilbert's Nullstellensatz, since $f$ vanishes at all points in $V(J)$, then $f \in \sqrt{J}$ which means that $f^q \in J$ for some $q > 0$ like we wanted to show. \qed

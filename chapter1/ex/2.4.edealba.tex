@@ -1,0 +1,30 @@
+\subsection*{2.4  {edealba}}
+
+\begin{enumerate}
+    \item Let $J \subset S$ be a homogeneous radical ideal that's \emph{not} $S_+$. We want to show that $I(Z(J)) = J$. Note that $Z(S_+) = \emptyset$. Suppose it were the case that $Z(J) = \emptyset$. This would imply that either $J = S$ or $J$ contains $S_+$. Since $J$ is a proper ideal, by assumption, then $J \neq S$. Furthermore, note that $S_+$ is a maximal \emph{homogeneous} ideal, hence $S_+ \subseteq J$ implies $J = S_+$, but recall that we assumed that $J \neq S_+$. We've reached a contradiction, thus $Z(J) \neq \emptyset$. By \textbf{1.2.3d}, we know that if $\a \subset S$ is a homogenous ideal with $Z(\a) \neq \emptyset$, then $I(Z(\a)) = \sqrt{\a}$. In our case, we know that $J$ is radical by assumption, thus:
+$$ I(Z(J)) = \sqrt{J} = J. $$
+
+Next, let $Y \subset \P^n$ be an algebraic set. From \textbf{1.2.3e}, we know that for any subset $W \subseteq \P^n$, we get $Z(I(W)) = \overline{W}$. Since $Y$ is an algebraic set, this means that $\overline{Y} = Y$, hence:
+$$ Z(I(Y)) = \overline{Y} = Y, $$
+like we wanted to show. \qed
+    \item ($\Leftarrow$) Suppose $I(Y)$ is a prime ideal. We want to show that $Y \subseteq \P^n$ is irreducible. Suppose, for contradiction, that $Y$ is reducible, i.e. we can write $Y = C_1 \cup C_2$ where $C_1, C_2 \subsetneq Y$. Since $I(Y)$ is a prime ideal, this means that $f_1f_2 \in I(Y)$ implies that $f_1 \in I(Y)$ or $f_2 \in I(Y)$. Note that since $Y = C_1 \cup C_2$, then we have:
+$$ I(Y) = I(C_1 \cup C_2) = I(C_1) \cap I(C_2). $$
+
+Since we have $C_1 \subsetneq Y$, then we have:
+$$ I(C_1) \supsetneq I(Y), $$
+i.e. $I(Y) \subsetneq I(C_1)$. Let $f_1 \in I(C_1) \setminus I(Y)$. Since $C_1$ is a strictly contained in $Y$, this means that $I(Y)$ is strcitly contained in $I(C_1)$, i.e. $ I(C_1) \setminus I(Y) \neq \emptyset$. Similarly for $C_2 \subsetneq Y$, we get $I(C_2) \setminus I(Y) \neq \emptyset$, so let $f_2 \in I(C_2) \setminus I(Y)$. Note that since $I(C_1) \cap I(C_2) = I(Y)$, then clearly we have that $f_1, f_2 \notin I(Y)$. We want to show that $f_1f_2 \in I(Y)$. Let $p \in Y$ be an arbitary point in $Y \subseteq \P^n$. Since $Y = C_1 \cup C_2$, then $p \in C_1$ or $p \in C_2$. If $p \in C_2$, then since $f_2 \in I(C_2) \setminus I(Y)$, then $f_1f_2(p) = 0$, i.e. it vanishes at $p$. Similarly, if $p \in C_1$ then the $f_1$ part of $f_1f_2$ vanishes at $p$, i.e. $f_1f_2(p) = f_1(p)f_2(p) = 0\cdot f_2(p) = 0$, and hence all of $f_1f_2(p) = 0$. Either case, we get that $f_1f_2 \in I(Y)$. Finally, since $I(Y)$ is a prime ideal, then this implies that either $f_1 \in I(Y)$ or $f_2 \in I(Y)$ which contradicts our earlier $f_1, f_2 \notin I(Y)$. Thus, $Y$ must be irreducible.
+
+($\Rightarrow$) Suppose $Y \subseteq \P^n$ is irreducible. Let $f_1f_2 \in I(Y)$. We want to show that $f_1 \in I(Y)$ or $f_2 \in I(Y)$. Suppose for contradiction that $f_1, f_2 \notin I(Y)$, i.e. there exists some points $p_1, p_2 \in Y$ such that $f_1(p_1) \neq 0$ and $f_2(p_2) \neq 0$. Note that if $p_1 = p_2$, then we immediately reach a contradiction since $f_1f_2(p_1) = f_1(p_1)f_2(p_1) \neq 0$ contradicts $f_1f_2 \in I(Y)$. Therefore, we have $p_1 \neq p_2$. Note that since $f_1f_2 \in I(Y)$ then $f_1f_2$ vanishes at both $p_1$ and $p_2$, i.e. $f_1f_2(p_1) = 0$ and $f_1f_2(p_2) = 0$. Let's focus on $f_1f_2(p_1) = 0$. Since $f_1f_2(p_1) = f_1(p_1)f_2(p_1)$ and $f_1(p_1) \neq 0$, then $f_2(p_1) = 0$. Similarly, $f_1f_2(p_2) = 0$ implies $f_1(p_2) = 0$. Consider the closed sets $C_1 = Y \cap V(f_1)$ and $C_2 = Y \cap V(f_2)$. Note that $p_2 \in C_1$ and $p_1 \in C_2$. Next, let's consider $C_1 \cup C_2$, where:
+$$ C_1 \cup C_2 = (Y \cap V(f_1)) \cup (Y \cap V(f_2)) = Y \cap (V(f_1) \cup V(f_2)). $$
+Furthermore, note that $V(f_1f_2) = V(f_1) \cup V(f_2)$, hence:
+$$ C_1 \cup C_2 = Y \cap V(f_1f_2), $$
+but since $f_1f_2 \in I(Y)$, then this implies that $Y \subset V(f_1f_2)$, which means that $Y \cap V(f_1f_2) = Y$, thus
+$$ C_1 \cup C_2 = Y. $$
+Note that since $Y$ is irreducible, then this means that either $C_1 = Y$ or $C_2 = Y$. Without loss of generality, if $C_1 = Y$, then this means that $Y \subseteq V(f_1)$ which contradicts our assumption that $f_1 \notin I(Y)$. Therefore, $I(Y)$ \emph{must} be a prime ideal.
+
+    \item First, note that $I(\P^n)$ is the ideal of homogeneous polynomials that vanish at every point in $\P^n$. Consider the \emph{homogeneous constant} polynomial $f(x_0, \ldots, x_n) = 0$. This is the only homogeneous polynomial in $k[x_0, \ldots, x_n]$ that vanishes at all points in $\P^n$, hence $I(\P^n) = (0)$. To show that $I(\P^n)$ is a prime ideal, note that
+$$ k[x_0, \ldots, x_n] / (0) \cong k[x_0, \ldots, x_n], $$
+and since $k[x_0, \ldots, x_n]$ itself is an integral domain, this implies that $I(\P^n) = (0)$ is a prime ideal. From \textbf{1.2.4b}, we know that $I(\P^n)$ being prime implies that $\P^n$ is irreducible. \qed
+
+
+\end{enumerate}
